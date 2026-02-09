@@ -3,8 +3,8 @@
   hosts: local
   connection: local
   vars:
-    NAME: "Mani"
+    ME: "Mani"
   tasks:
   - name: Print variables
     ansible.buitlin.debug:
-      msg: "Hi {{ NAME }}"
+      msg: "Hi {{ ME }}"
