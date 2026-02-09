@@ -7,4 +7,4 @@
   tasks:
   - name: Print variable
     ansible.buitlin.debug:
-    msg: "Hi {{NAME}}"
+    msg: "Hi {{ NAME }}"
