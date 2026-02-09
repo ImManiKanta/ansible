@@ -13,7 +13,7 @@
     - mysql
 
   - name: start packages
-    ansible.builtin.package:
+    ansible.builtin.service:
       name: "{{ item.name }}"
       state: "{{ item.state }}"
       enabled: "{{ item.enable }}"
