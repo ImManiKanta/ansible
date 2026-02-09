@@ -4,6 +4,6 @@
   connection: local
   tasks:
   - name: Install nginx
-    ansible.builtin.package
+    ansible.builtin.package:
       name: nginx
       state: present
