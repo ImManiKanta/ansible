@@ -1,0 +1,23 @@
+---
+- name: Install packages using loops
+  hosts: web
+  become: yes
+  tasks:
+  - name: Install packages
+    ansible.builtin.package:
+      name: "{{ item }}"
+      state: present
+    loop:
+    - nginx
+    - nodejs
+    - mysql
+
+  - name: start packages
+    ansible.builtin.package:
+      name: "{{ item.name }}"
+      state: "{{ item.state }}"
+      enabled: "{{ item.enable }}"
+    loop: #list of map
+    - { name: nginx, state: started, enable: yes } #dictionary/map
+    - { name: nodejs, state: started, enable: yes }
+    - { name: mysql, state: started, enable: yes }
