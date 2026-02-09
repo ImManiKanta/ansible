@@ -18,6 +18,6 @@
       state: "{{ item.state }}"
       enabled: "{{ item.enable }}"
     loop: #list of map
-    - { name: nginx, state: started, enable: yes } #dictionary/map
-    - { name: nodejs, state: started, enable: yes }
-    - { name: mysql, state: started, enable: yes }
+    - { name: "nginx", state: "started", enable: "yes" } #dictionary/map
+    - { name: "nodejs", state: "started", enable: "yes" }
+    - { name: "mysql", state: "started", enable: "yes" }
