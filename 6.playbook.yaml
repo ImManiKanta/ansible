@@ -6,5 +6,5 @@
     NAME: "Mani"
   tasks:
   - name: Print variable
-  ansible.buitlin.debug:
-  msg: "Hi {{NAME}}"
+    ansible.buitlin.debug:
+    msg: "Hi {{NAME}}"
