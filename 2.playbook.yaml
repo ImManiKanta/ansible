@@ -1,0 +1,7 @@
+---
+- name: Install and run nginx
+  hosts: local
+  connection: local
+  tasks:
+  - name: Install nginx
+  - state: present
